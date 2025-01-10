@@ -2,7 +2,6 @@ import re
 import subprocess
 import sys
 import time
-from pathlib import Path
 
 import requests
 
@@ -40,9 +39,6 @@ def auto_etp_install():
     repo_package_url = get_repo_package()
     if repo_package_url:
         install_pip_package_using_pip(download_url(repo_package_url))
-    opl = 'http://autoetp2.jenkins.akamai.com/job/utils-nodes-health-check/lastSuccessfulBuild/artifact/online_params.py'
-    download_url(opl, f'{Path.home() / "online_params.py"}')
-
 
 try:
     from auto_etp.jarvis import main_new_window
