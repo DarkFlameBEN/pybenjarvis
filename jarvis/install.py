@@ -12,6 +12,7 @@ def auto_etp_install(branch):
     if repo_package_url:
         install_pip_package_using_pip(download_url(repo_package_url))
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         'Download the auto_etp repo package from our Jenkins server and install using "pip install"')
@@ -19,7 +20,7 @@ if __name__ == '__main__':
     # parser.add_argument('-n', '--build', type=str, default='lastSuccessfulBuild')
     args = parser.parse_args()
 
-    op = 'http://autoetp2.jenkins.akamai.com/job/utils-nodes-health-check/lastSuccessfulBuild/artifact/online_params.py'
+    op = 'http://autoetp2.jenkins.akamai.com/job/utils-online_params/lastSuccessfulBuild/artifact/online_params.py'
     download_url(op, f'{Path.home() / "online_params.py"}')
 
     auto_etp_install(branch=args.branch)
