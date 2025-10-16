@@ -18,4 +18,4 @@ PyBEN jarvis is a getter for Akamai auto_etp local repo. Also adds the 'jarvis' 
 > python -m pybenjarvis.install
 
 ### Jarvis module activation
-> python -m jarvis
+> python -m pybenjarvis
