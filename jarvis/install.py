@@ -14,11 +14,8 @@ def auto_etp_install(branch):
         if repo_package_url:
             package_name = download_url(repo_package_url)
         assert package_name, f'Failed to download package for given branch {branch}'
-    install_pip_package_using_pip(package_name,
-                                  ['--extra-index-url',
-                                   'http://172.24.170.229:8080/simple/',
-                                   '--trusted-host',
-                                   '172.24.170.229:8080'])
+    install_pip_package_using_pip(package_name, '--extra-index-url', 'http://172.24.170.229:8080/simple/',
+                                  '--trusted-host', '172.24.170.229:8080')
 
 
 if __name__ == '__main__':
