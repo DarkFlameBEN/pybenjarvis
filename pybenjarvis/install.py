@@ -1,5 +1,6 @@
 import argparse
 from pathlib import Path
+from urllib.parse import quote_plus
 
 from pybenutils.network.download_manager import download_url
 from pybenutils.useful import install_pip_package_using_pip
@@ -9,6 +10,7 @@ def auto_etp_install(branch):
     """Download and install auto_etp repo package to python site packages"""
     package_name = 'auto_etp'
     if branch != 'master':
+        branch = quote_plus(branch)
         repo_package_url = (f'http://autoetp2.jenkins.akamai.com/job/utils-sources/job/{branch}/lastSuccessfulBuild/'
                             f'artifact/auto_etp.tar.gz')
         if repo_package_url:

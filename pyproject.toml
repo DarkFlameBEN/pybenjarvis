@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pybenjarvis"
-version = "3.0.1"
+version = "3.1.0"
 description = "PyBEN jarvis is a getter for Akamai auto_etp local repo. Also adds the 'jarvis' module to site-packages"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -37,7 +37,7 @@ classifiers = [
   "Programming Language :: Python :: 3.13"
 ]
 dependencies = [
-  'pybenutils>=7.6.0',
+  'pybenutils>=7.10.0',
 ]
 
 [project.urls]
